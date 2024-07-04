@@ -2,7 +2,8 @@
 
 # Function to check if changes exist
 check_changes() {
-    git status --porcelain | grep "M "  # Adjust if needed for untracked files
+    #git status --porcelain | grep "M "  # Adjust if needed for untracked files
+     git status --porcelain | grep -E "^(M |U )"
 }
 
 # Function to auto commit and push changes
